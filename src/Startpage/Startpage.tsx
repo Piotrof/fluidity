@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
 import styled from "@emotion/styled"
 
@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 `
 
 const StyledStartpage = styled.div`
+  gap: 100px;
   padding: 0px 100px;
   display: flex;
   flex-direction: row;
@@ -41,7 +42,7 @@ export const Startpage = () => {
     <Wrapper>
       <StyledStartpage>
         <div>
-          <Image src={img} onError={() => setImg(images[0].value)} />
+          <Image src={img} onError={() => setImg(images[0]!.value)} />
         </div>
         <LinkContainer />
       </StyledStartpage>

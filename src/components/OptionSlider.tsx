@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 import styled from "@emotion/styled"
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
@@ -27,13 +27,15 @@ export const OptionSlider = ({ values, onChange, currentValue }: props) => {
   const [index, setIndex] = useState(0)
   useEffect(() => {
     values.forEach((val, i) => {
-      currentValue === val.value && i !== index && setIndex(i)
+      if (currentValue === val.value && i !== index) {
+        setIndex(i)
+      }
     })
   }, [currentValue, values, index])
 
   const handleChange = (newIndex: number) => {
     setIndex(newIndex)
-    onChange(values[newIndex]?.value)
+    onChange(values[newIndex]?.value ?? "")
   }
 
   return (

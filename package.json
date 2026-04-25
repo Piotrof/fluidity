@@ -1,49 +1,35 @@
 {
   "name": "fluidity",
   "description": "An accordion based startpage.",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "homepage": "./",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "lint": "eslint ./src --ignore-path .gitignore",
+    "lint": "eslint",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "react": "^18.2.0",
-    "react-color": "^2.19.3",
-    "react-dom": "^18.2.0"
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@fortawesome/free-solid-svg-icons": "7.2.0",
+    "@fortawesome/react-fontawesome": "3.2.0",
+    "react": "19.2.4",
+    "react-color": "2.19.3",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@pretty-cozy/eslint-config": "^0.2.0",
-    "@types/react": "^18.2.18",
-    "@types/react-color": "^3.0.6",
-    "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^4.0.4",
-    "gh-pages": "^4.0.0",
-    "typescript": "^4.9.5",
-    "vite": "^4.4.8",
-    "vite-plugin-checker": "^0.6.1"
+    "@pretty-cozy/eslint-config": "0.9.0-alpha.5",
+    "@types/react": "19.2.14",
+    "@types/react-color": "3.0.13",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.2.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.1"
   },
   "browserslist": [
     "defaults"
-  ],
-  "eslintConfig": {
-    "extends": [
-      "@pretty-cozy/eslint-config/base-ts",
-      "@pretty-cozy/eslint-config/react"
-    ],
-    "rules": {
-      "check-file/folder-naming-convention": "off",
-      "react/jsx-max-depth": "off"
-    }
-  }
+  ]
 }

@@ -18,16 +18,6 @@ export interface linkGroup {
   links: dataElem[]
 }
 
-/* eslint-disable */
-/*
-──────▄▌▐▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀​▀▀▀▀▀▀▌
-───▄▄██▌█ BEEP BEEP
-▄▄▄▌▐██▌█ GAY PORN DELIVERY
-███████▌█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄​▄▄▄▄▄▄▌
-▀(@)▀▀▀▀▀▀▀(@)(@)▀▀▀▀▀▀▀▀▀▀▀▀▀​▀▀▀▀(@)▀
-*/
-/* eslint-enable */
-
 export const links: linkGroup[] = [
   {
     title: "Reddit",
@@ -197,7 +187,7 @@ export interface Search {
 }
 
 export const searchSettings: Search = {
-  engine: searchEngines[0].value,
+  engine: searchEngines[0]?.value ?? "",
   fastForward: {
     deepl: "https://deepl.com/",
     maps: "https://google.de/maps/",
